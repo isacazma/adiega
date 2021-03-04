@@ -21,6 +21,16 @@ public class Persoon {
         return budget;
     }
 
+    public Game zoekGameOpNaam(String p) {
+
+        for (Game D : mijnGames) {
+            if (D.getNaam().equals(p)) {
+                return D;
+            }
+        }
+        return null;
+    }
+
 
     public boolean koop(Game t) {
         if (!mijnGames.contains(t) && budget >= t.huidigeWaarde()) {
