@@ -6,7 +6,7 @@ public class Persoon {
     private String naam;
     private double budget;
     private ArrayList<Game> mijnGames;
-
+    private ArrayList<Game> nogNietInBezit;
 
     public Persoon(String nm, double bud) {
         naam = nm;
@@ -52,6 +52,18 @@ public class Persoon {
             return false;
         }
     }
+
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
+        nogNietInBezit = new ArrayList<Game>();
+        for (Game a : teKoop) {
+            for (Game i : mijnGames) {
+                if (!a.equals(i) && !nogNietInBezit.contains(a)) {
+                    nogNietInBezit.add(a);
+                }
+            }
+
+        }
+        return nogNietInBezit; }
 
 
     public String toString() {
