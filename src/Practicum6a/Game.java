@@ -14,9 +14,9 @@ public class Game {
         return naam;
     }
     public double huidigeWaarde() {
-        int delta= LocalDate.now().getYear()-releaseJaar;
-        double factor=Math.pow(0.70, delta);
-        double e = nieuwprijs * factor;
+        int tijd = LocalDate.now().getYear()-releaseJaar;
+        double af = Math.pow(0.70, tijd);
+        double e = nieuwprijs * af;
         return e;
          }
 
