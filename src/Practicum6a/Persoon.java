@@ -56,7 +56,6 @@ public class Persoon {
         return nogNietInBezit; }
 
 
-
     public String toString() {
         String dc = naam + " heeft een budget van €" + ( String.format("%.2f", getBudget())) + " en bezit de volgende games:" ;
         for (Game D : mijnGames) {
